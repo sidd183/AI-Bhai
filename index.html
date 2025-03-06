@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Bhai Tera Asli Bhai</title>
+    <title>Sidd Bhai GPT 🔥</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #121212;
+            color: #fff;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #ff0000;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>🔥 AI Bhai Tera Asli Bhai 🔥</h1>
-    <p>Jahan Bhai Wahan Code 💪😏</p>
+<h1>💬 Sidd Bhai GPT</h1>
+<input type="text" id="prompt" placeholder="Bhai se puchle kuch bhi...">
+<button onclick="reply()">AI Bhai Bol Raha Hai 🔥</button>
+<p id="response"></p>
+
+<script>
+    function reply() {
+        let prompt = document.getElementById("prompt").value;
+        let response = document.getElementById("response");
+        if (prompt.toLowerCase() === "bhai") {
+            response.innerHTML = "Tera Asli Bhai 🔥😏";
+        } else if (prompt.toLowerCase() === "site ka naam kya hai") {
+            response.innerHTML = "Sidd Bhai GPT 😏🚀";
+        } else {
+            response.innerHTML = "AI Bhai soch raha hai... 🧠";
+            setTimeout(() => {
+                response.innerHTML = "Bhai ne abhi tak ye cheez nahi sikh rakhi 😭💀";
+            }, 2000);
+        }
+    }
+</script>
 </body>
 </html>
+
