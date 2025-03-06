@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidd183 GPT 🔥</title>
+    <title>Sidd Bhai GPT 🔥🚀</title>
     <style>
         body {
+            background-color: #121212;
+            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
-            background-color: #121212;
-            color: #fff;
+            padding-top: 50px;
         }
         input {
+            width: 70%;
             padding: 10px;
-            width: 60%;
             border: none;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
         button {
             padding: 10px 20px;
             border: none;
-            background: #ff0000;
-            color: #fff;
             border-radius: 10px;
+            background: #ff0000;
+            color: white;
             cursor: pointer;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
 <body>
-<h1>Sidd183 GPT 🔥</h1>
-<input type="text" id="input" placeholder="Puchle bhai se kuch bhi...">
-<button onclick="chat()">AI Bhai Bol Raha Hai 💪</button>
-<p id="output"></p>
+<h1>Sidd Bhai GPT 🔥🚀</h1>
+<p>Bhai se kuch bhi pooch lo 😏</p>
+<input type="text" id="prompt" placeholder="Bhai se pooch...">
+<button onclick="askBhai()">AI Bhai Bol Raha Hai 💪</button>
+<div id="response"></div>
 
 <script>
-    async function chat() {
-        let input = document.getElementById("input").value;
-        let output = document.getElementById("output");
-        output.innerHTML = "AI Bhai soch raha hai... 🧠";
-
-        let response = await fetch(`https://api.monkedev.com/fun/chat?msg=${input}`);
-        let data = await response.json();
-
-        setTimeout(() => {
-            output.innerHTML = data.response;
-        }, 2000);
-    }
+async function askBhai() {
+    let prompt = document.getElementById("prompt").value;
+    let responseDiv = document.getElementById("response");
+    responseDiv.innerHTML = "AI Bhai soch raha hai...🧠";
+    
+    let api = `https://api.monkedev.com/fun/chat?msg=${prompt}`;
+    let response = await fetch(api);
+    let data = await response.json();
+    
+    setTimeout(() => {
+        responseDiv.innerHTML = data.response;
+    }, 2000);
+}
 </script>
 </body>
 </html>
